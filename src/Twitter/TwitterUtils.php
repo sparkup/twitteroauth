@@ -123,8 +123,8 @@ class TwitterUtils {
 		if (!$params) return '';
 		
 		// Urlencode both keys and values
-		$keys = Util::urlencode_rfc3986(array_keys($params));
-		$values = Util::urlencode_rfc3986(array_values($params));
+		$keys = TwitterUtils::urlencode_rfc3986(array_keys($params));
+		$values = TwitterUtils::urlencode_rfc3986(array_values($params));
 		$params = array_combine($keys, $values);
 		
 		// Parameters are sorted by name, using lexicographical byte value ordering.
