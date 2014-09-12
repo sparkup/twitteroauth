@@ -99,7 +99,7 @@ class TwitterUtils {
 		$parsed_parameters = array();
 		foreach ($pairs as $pair) {
 			$split = explode('=', $pair, 2);
-			$parameter = Util::urldecode_rfc3986($split[0]);
+			$parameter = TwitterUtils::urldecode_rfc3986($split[0]);
 			$value = isset($split[1]) ? Util::urldecode_rfc3986($split[1]) : '';
 	
 			if (isset($parsed_parameters[$parameter])) {
